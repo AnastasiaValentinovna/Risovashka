@@ -1,0 +1,70 @@
+﻿<Window x:Class="Risovashka_1.Registration_Window"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Risovashka_1"
+        mc:Ignorable="d"
+        Title="Registration_Window" Height="450" Width="800" Icon="C:/Users/79613/Desktop/КУРСОВАЯ ВПКС/ЛОГОТИП КУРСОВАЯ.jpg">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"></RowDefinition>
+            <RowDefinition Height="1*"></RowDefinition>
+            <RowDefinition Height="1*"></RowDefinition>
+            <RowDefinition Height="1*"></RowDefinition>
+            <RowDefinition Height="1*"></RowDefinition>
+            <RowDefinition Height="1*"></RowDefinition>
+            <RowDefinition Height="1*"></RowDefinition>
+            <RowDefinition Height="1*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Border Grid.Row="1" Background="#66746F72"/>
+        <Border Grid.Row="2" Background="#66746F72"/>
+        <Image Source="C:/Users/79613/Desktop/КУРСОВАЯ ВПКС/ЛОГОТИП КУРСОВАЯ.jpg" Grid.Row="0"></Image>
+        <TextBlock Text="Р Е Г И С Т Р А Ц И Я" TextWrapping="Wrap" Grid.Row="1" FontSize="30"></TextBlock>
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"></ColumnDefinition>
+                <ColumnDefinition Width="1*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <TextBlock Text="вход в личный кабинет" TextWrapping="Wrap" Grid.Column="0" FontSize="25"    TextDecorations="Underline" MouseDown="TextBlock_MouseDown"  ></TextBlock>
+            <TextBlock Text="регистрация" TextWrapping="Wrap" Grid.Column="1" FontSize="25" FontFamily="Palatino Linotype"   TextDecorations="Underline" MouseDown="TextBlock_MouseDown_1" ></TextBlock>
+        </Grid>
+        <Grid Grid.Row="3">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"></ColumnDefinition>
+                <ColumnDefinition Width="1*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <TextBlock Text="Введите ФИО:" TextWrapping="Wrap" Grid.Row="1" FontSize="25"></TextBlock>
+            <TextBox x:Name="FIO"  Grid.Column="1" Height="30" Width="300" FontSize="18"></TextBox>
+        </Grid>
+        <Grid Grid.Row="4">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"></ColumnDefinition>
+                <ColumnDefinition Width="1*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <TextBox x:Name="login" Grid.Column="1" Height="30" Width="300" FontSize="18"></TextBox>
+            <TextBlock Text="Введите логин:" TextWrapping="Wrap" Grid.Row="1" FontSize="25"></TextBlock>
+        </Grid>
+
+        <Grid Grid.Row="5">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"></ColumnDefinition>
+                <ColumnDefinition Width="1*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <TextBlock Text="Введите пароль:" TextWrapping="Wrap" Grid.Row="1" FontSize="25"  ></TextBlock>
+            <TextBox  x:Name="password" Grid.Column="1" Height="30" Width="300"  FontSize="18" ></TextBox>
+        </Grid>
+        <Grid Grid.Row="6">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"></ColumnDefinition>
+                <ColumnDefinition Width="1*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <TextBlock Text="Выберите роль:" TextWrapping="Wrap" Grid.Row="1" FontSize="25"  ></TextBlock>
+            <ComboBox Height="30" Width="300" x:Name="role" Grid.Column="1"  FontSize="20" FontFamily="Palatino Linotype">
+                <TextBlock>Голосующий</TextBlock>
+                <TextBlock>Конкурсант</TextBlock>
+            </ComboBox>
+        </Grid>
+        <Button x:Name="V" Content="Зарегистрироваться"  HorizontalAlignment="Center" Grid.Row="7"  Height="35" Width="200" Click="V_Click"  ></Button>
+    </Grid>
+</Window>
